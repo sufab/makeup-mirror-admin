@@ -53,10 +53,6 @@ export const VisitorList = (props) => (
         <Datagrid bodyOptions={{ stripedRows: true, showRowHover: true }}>
             <FullNameField />
             <DateField source="last_seen" type="date" />
-            <NumberField source="nb_commands" label="resources.customers.fields.commands" style={{ color: 'purple' }} />
-            <ColoredNumberField source="total_spent" options={{ style: 'currency', currency: 'USD' }} />
-            <DateField source="latest_purchase" showTime />
-            <BooleanField source="has_newsletter" label="News." />
             <SegmentsField />
             <EditButton />
         </Datagrid>
@@ -78,29 +74,6 @@ export const VisitorEdit = (props) => (
                 <LongTextInput source="address" style={{ maxWidth: 544 }} />
                 <TextInput source="zipcode" style={{ display: 'inline-block' }} />
                 <TextInput source="city" style={{ display: 'inline-block', marginLeft: 32 }} />
-            </FormTab>
-            <FormTab label="resources.customers.tabs.orders">
-                <ReferenceManyField addLabel={false} reference="commands" target="customer_id">
-                    <Datagrid>
-                        <DateField source="date" />
-                        <TextField source="reference" />
-                        <NbItemsField />
-                        <NumberField source="total" options={{ style: 'currency', currency: 'USD' }} />
-                        <TextField source="status" />
-                        <EditButton />
-                    </Datagrid>
-                </ReferenceManyField>
-            </FormTab>
-            <FormTab label="resources.customers.tabs.reviews">
-                <ReferenceManyField addLabel={false} reference="reviews" target="customer_id">
-                    <Datagrid filter={{ status: 'approved' }}>
-                        <DateField source="date" />
-                        <ProductReferenceField />
-                        <StarRatingField />
-                        <TextField source="comment" style={{ maxWidth: '20em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} />
-                        <EditButton style={{ padding: 0 }} />
-                    </Datagrid>
-                </ReferenceManyField>
             </FormTab>
             <FormTab label="resources.customers.tabs.stats">
                 <SegmentsInput />

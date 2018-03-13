@@ -12,22 +12,21 @@ export default {
             monthly_revenue: 'Monthly Revenue',
             new_orders: 'New Orders',
             pending_reviews: 'Pending Reviews',
-            new_customers: 'New Customers',
+            new_customers: 'New Users',
             pending_orders: 'Pending Orders',
             order: {
                 items: 'by %{customer_name}, one item |||| by %{customer_name}, %{nb_items} items',
             },
             welcome: {
-                title: 'Welcome to admin-on-rest demo',
-                subtitle: 'This is the admin of an imaginary poster shop. Fell free to explore and modify the data - it\'s local to your computer, and will reset each time you reload.',
-                aor_button: 'Admin-on-rest website',
+                title: 'Welcome to Makeup mirror Admin',
+                subtitle: 'This is the admin of the Makeup mirror social network.',
                 demo_button: 'Source for this demo',
             },
         },
     },
     resources: {
         customers: {
-            name: 'Customer |||| Customers',
+            name: 'User |||| Users',
             fields: {
                 commands: 'Orders',
                 groups: 'Segments',
@@ -42,7 +41,7 @@ export default {
                 stats: 'Stats',
             },
             page: {
-                delete: 'Delete Customer',
+                delete: 'Delete User',
             },
 
         },
@@ -65,7 +64,7 @@ export default {
             },
         },
         products: {
-            name: 'Poster |||| Posters',
+            name: 'Picture |||| Pictures',
             fields: {
                 category_id: 'Category',
                 height_gte: 'Min height',
