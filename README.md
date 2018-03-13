@@ -1,5 +1,9 @@
 # Makeup Mirror admin project
 
+## Getting started
+
+before running the project run `npm install` or `yarn install` for yarn users.
+
 ## Available Scripts
 
 In the project directory, you can run:
